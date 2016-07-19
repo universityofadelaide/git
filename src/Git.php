@@ -130,25 +130,25 @@ class Git
     }
 
     /**
-     * @param string $filename
+     * @param  string $filename
      * @return string
      */
     public function add($filename)
     {
-      $output = $this->execute('add ' . $filename);
+        $output = $this->execute('add ' . $filename);
 
-      return $output[0];
+        return $output[0];
     }
 
     /**
-     * @param string $commitMessage
+     * @param  string $commitMessage
      * @return string
      */
     public function commit($commitMessage)
     {
-      $output = $this->execute("commit -m '" . addslashes($commitMessage) . "'");
+        $output = $this->execute("commit -m '" . addslashes($commitMessage) . "'");
 
-      return $output[0];
+        return $output[0];
     }
 
     /**
